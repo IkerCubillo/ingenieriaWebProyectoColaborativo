@@ -1,0 +1,23 @@
+{% extends "base_1.html" %}
+
+{% block titulo %} Personajes del raza {% endblock %}
+
+{% block lista %}
+<div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+		<h2>Lista de personajes</h2>
+		<h4>{{ raza.nombre }}</h4>
+    </div>
+	{% if personajes %}
+    	<ul class="w3-ul w3-hoverable w3-white">
+	  	{% for e in personajes %}
+			<li class="w3-padding-16">
+				<span class="w3-large"><a href="{% url 'personaje' e.id %}">{{ e.nombre}}</a></span><br>
+			</li>  
+		{% endfor %}
+    </ul>
+	{% else %}
+		<p>No hay personajes en el raza.</p>
+	{% endif %}
+  </div>
+{% endblock %}

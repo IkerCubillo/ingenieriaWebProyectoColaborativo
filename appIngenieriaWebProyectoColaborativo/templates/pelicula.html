@@ -1,0 +1,25 @@
+{% extends "base_1.html" %}
+
+{% block titulo %} Detalles de la pelicula {% endblock %}
+
+{% block contenido %}
+
+<h2>Datos de la pelicula</h2>
+
+{% if pelicula %}
+    <h3>{{ pelicula.nombre}}</h3>
+	<h3>Lista de personajes</h3>
+	{% if personajes %}
+		<ol>
+		{% for e in personajes %}
+			<li><a href="{% url 'personaje' e.id %}">{{ e.nombre}}</a></li>
+		{% endfor %}
+		</ol>
+	{% else %}
+		<p>No tiene personajes asociados.</p>
+	{% endif %}
+{% else %}
+    <p>No existe esta pelicula.</p>
+{% endif %}
+
+{% endblock %}

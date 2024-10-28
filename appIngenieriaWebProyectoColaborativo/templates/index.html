@@ -1,0 +1,22 @@
+{% extends "base_1.html" %}
+
+{% block titulo %}Listado de razas{% endblock %}
+
+{% block lista %}
+<div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+		<h4>Listado de razas</h4>
+    </div>
+	{% if lista_razas %}
+    	<ul class="w3-ul w3-hoverable w3-white">
+	  	{% for d in lista_razas %}
+			<li class="w3-padding-16">
+				<span class="w3-large"><a href="{% url 'detail' d.id %}">{{ d.nombre}}</a></span><br>
+			</li>  
+		{% endfor %}
+    </ul>
+	{% else %}
+		<p>No hay razas creados.</p>
+	{% endif %}
+  </div>
+{% endblock %}

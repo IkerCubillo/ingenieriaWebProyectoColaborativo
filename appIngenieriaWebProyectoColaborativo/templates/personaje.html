@@ -1,0 +1,50 @@
+{% extends "base_1.html" %}
+
+{% block titulo %} Detalles del personaje {% endblock %}
+
+{% block entry %}
+  <!-- BEGIN ENTRIES -->
+  <div class="w3-col l8 s12">
+  
+      <!-- Blog entry -->
+      <div class="w3-card-4 w3-margin w3-white">
+        <div class="w3-container">
+          <h3><b>Datos del personaje</b></h3>
+          {% if personaje %}
+            <h5>{{ personaje.nombre}}, <span class="w3-opacity">{{ personaje.fecha_nacimiento}}</span></h5>
+          {% else %}
+            <p>No existe este personaje.</p>
+          {% endif %}
+        </div>
+        {% if personaje %}
+          <div class="w3-container">
+            <p>
+              {{ personaje.nombre}} trabaja en <a href="{% url 'detail' personaje.raza.id %}">{{ personaje.raza}}</a> y tiene una antiguedad de {{ personaje.antiguedad}} años
+            </p>
+          </div>
+        {% else %}
+            <p>No existe este personaje.</p>
+          {% endif %}
+      </div>
+    </div>
+    <!-- END ENTRIES -->
+    {% endblock %}
+
+    {% block lista %}
+      <div class="w3-card w3-margin">
+          <div class="w3-container w3-padding">
+          <h4>Lista de peliculas</h4>
+          </div>
+        {% if peliculas %}
+          <ul class="w3-ul w3-hoverable w3-white">
+          {% for h in peliculas %}
+            <li class="w3-padding-16">
+              <span class="w3-large"><a href="{% url 'pelicula' h.id %}">{{ h.nombre}}</a></span><br>
+            </li>  
+          {% endfor %}
+          </ul>
+        {% else %}
+          <p>No tiene peliculas asociadas.</p>
+        {% endif %}
+      </div>
+    {% endblock %}

@@ -1,0 +1,16 @@
+set WORKON_HOME=%USERPROFILE%\Envs\
+set PROJECT_HOME=%USERPROFILE%\Projects\
+
+workon proyectoWebColaborativoEnv
+
+python manage.py makemigrations appIngenieriaWebProyectoColaborativo
+python manage.py migrate
+
+python manage.py runserver
+
+Raza -> Departamento
+Personaje -> Empleado
+Habilidad -> Película
+
+adminDjango
+adminDjango

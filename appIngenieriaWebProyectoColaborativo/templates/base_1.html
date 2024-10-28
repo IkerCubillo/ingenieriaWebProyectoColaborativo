@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="exam" content="20240111">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/w3.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/exam.css' %}">
+
+    <title>{% block titulo %}W3.CSS Template{% endblock %}</title>
+  </head>
+<body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
+  <h1><b>MY EXAM</b></h1>
+  <p>Welcome to the template for the <span class="w3-tag">IW</span> exam</p>
+</header>
+
+<!-- Grid -->
+<div class="w3-row">
+
+  {% block entry %}
+  {% endblock %}
+
+<!-- Introduction menu -->
+<div class="w3-col l4">
+
+  <!-- About Card -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <div class="w3-container w3-white">
+      <h4><b>My Name</b></h4>
+      <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
+    </div>
+    {% block contenido %}{% endblock %}
+  </div>
+
+  <hr>
+  
+  <!-- Posts -->
+  {% block lista %}
+  {% endblock %}
+  <hr> 
+
+  
+</div> 
+<!-- END Introduction Menu -->
+
+</div>
+<!-- END GRID -->
+
+<br>
+
+</div>
+<!-- END w3-content -->
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  <p>Adapted for the IW exam</p>
+</footer>
+
+</body>
+</html>
