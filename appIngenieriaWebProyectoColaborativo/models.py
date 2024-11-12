@@ -28,16 +28,17 @@ class Personaje(models.Model):
     # Campo para la relación one-to-many (un personaje pertenece a una raza)
     raza = models.ForeignKey(Raza, on_delete=models.CASCADE)
     subRaza = models.ForeignKey(SubRaza, on_delete=models.CASCADE)
-    # Campo para la relación many-to-many (un personaje participa en varias peliculas)
-    peliculas = models.ManyToManyField(Pelicula)
 
     nombre = models.CharField(max_length=40)
+    genero = models.CharField(max_length=50)
+    estatura = models.IntegerField(default=1.80)
+
     edadTierra = models.CharField(max_length=50)
     fecha_nacimiento = models.DateField()
-    fecha_muerte = models.DateField()
-    genero = models.CharField(max_length=50)
-    antiguedad = models.IntegerField(default=0)
-    # Para permitir propiedades con valor null, añadiremos las opciones null=True, blank=True.       	
+    fecha_muerte = models.DateField(null=True)
+
+    # Campo para la relación many-to-many (un personaje participa en varias peliculas)
+    peliculas = models.ManyToManyField(Pelicula)     	
 
     def __str__(self):
         return self.nombre
