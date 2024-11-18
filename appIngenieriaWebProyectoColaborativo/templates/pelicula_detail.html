@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ pelicula.nombre }} - The Lord of the Rings{% endblock %}
+{% block header %}{{ pelicula.nombre }} - The Lord of the Rings{% endblock %}
+{% block content %}
+<h2><a href="#" id="titulo_content">{{ pelicula.nombre }}</a></h2>
+
+<h3>Personajes</h3>
+{% if personajes %}
+    <ul>
+        {% for personaje in personajes %}
+            <li><a href="{% url 'personaje' personaje.id %}">{{ personaje.nombre }}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>No tiene personajes asociados.</p>
+{% endif %}
+{% endblock %}

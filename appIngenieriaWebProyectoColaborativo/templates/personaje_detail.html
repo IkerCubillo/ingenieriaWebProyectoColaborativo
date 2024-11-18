@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ personaje.nombre }} - The Lord of the Rings{% endblock %}
+{% block header %}{{ personaje.nombre }} - The Lord of the Rings{% endblock %}
+{% block content %}
+<h2><a href="#" id="titulo_content">{{ personaje.nombre }}</a></h2>
+<p>Raza: <a href="{% url 'raza' personaje.raza.id %}">{{ personaje.raza }}</a></p>
+<p>Sub-raza: {{ personaje.subRaza }}</p>
+<p>Género: {{ personaje.genero }}</p>
+
+<p>Género: {{ personaje.genero }}</p>
+<p>Estatura: {{ personaje.estatura }} m</p>
+<p>Edad en la Tierra Media: {{ personaje.edadTierra }}</p>
+<p>Fecha de nacimiento: {{ personaje.fecha_nacimiento }}</p>
+<p>Fecha de muerte: {{ personaje.fecha_muerte|default:"N/A" }}</p>
+
+<h3>Películas</h3>
+{% if peliculas %}
+    {% for h in peliculas %}
+        <li>
+            <a href="{% url 'pelicula' h.id %}">{{ h.nombre}}</a>
+        </li>  
+    {% endfor %}
+    </ul>
+    {% else %}
+        <p>No tiene peliculas asociadas.</p>
+{% endif %}
+{% endblock %}

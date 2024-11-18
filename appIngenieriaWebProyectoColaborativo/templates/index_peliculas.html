@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Peliculas - The Lord of the Rings{% endblock %}
+{% block header %}Peliculas - The Lord of the Rings{% endblock %}
+{% block content %}
+<h2><a href="#" id="titulo_content">Películas del universo del Señor de los Anillos</a></h2>
+
+{% if lista_peliculas %}
+    <ul>
+    {% for pelicula in lista_peliculas %}
+        <li> 
+            <a href="{% url 'pelicula' pelicula.id %}">{{ pelicula.nombre}}</a>
+        </li>  
+    {% endfor %}
+    </ul>
+    {% else %}
+        <p>No existen películas.</p>
+{% endif %}
+{% endblock %}

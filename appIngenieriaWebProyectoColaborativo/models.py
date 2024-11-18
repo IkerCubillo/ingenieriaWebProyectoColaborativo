@@ -27,15 +27,15 @@ class Pelicula(models.Model):
 class Personaje(models.Model):
     # Campo para la relación one-to-many (un personaje pertenece a una raza)
     raza = models.ForeignKey(Raza, on_delete=models.CASCADE)
-    subRaza = models.ForeignKey(SubRaza, on_delete=models.CASCADE)
+    subRaza = models.ForeignKey(SubRaza, on_delete=models.CASCADE, null=True, blank=True)
 
     nombre = models.CharField(max_length=40)
     genero = models.CharField(max_length=50)
-    estatura = models.IntegerField(default=1.80)
+    estatura = models.FloatField(default=1.80)
 
     edadTierra = models.CharField(max_length=50)
     fecha_nacimiento = models.DateField()
-    fecha_muerte = models.DateField(null=True)
+    fecha_muerte = models.DateField(null=True, blank=True)
 
     # Campo para la relación many-to-many (un personaje participa en varias peliculas)
     peliculas = models.ManyToManyField(Pelicula)     	

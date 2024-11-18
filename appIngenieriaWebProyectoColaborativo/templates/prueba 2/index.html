@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<h1>Bienvenido a The Lord of the Rings</h1>
+<p>Descubre el mundo épico de "El Señor de los Anillos".</p>
+
+<section>
+    <h2>Un personaje de cada raza</h2>
+    <ul>
+        {% for raza in lista_razas %}
+            <li>
+                <strong>{{ raza.nombre }}:</strong> {{ raza.personaje_set.first.nombre }}
+            </li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}

@@ -1,22 +1,25 @@
-{% extends "base_1.html" %}
+{% extends 'base.html' %}
 
-{% block titulo %}Listado de razas{% endblock %}
+{% block title %}Portada - The Lord of the Rings{% endblock %}
+{% block header %}Portada - The Lord of the Rings{% endblock %}
 
-{% block lista %}
-<div class="w3-card w3-margin">
-    <div class="w3-container w3-padding">
-		<h4>Listado de razas</h4>
-    </div>
-	{% if lista_razas %}
-    	<ul class="w3-ul w3-hoverable w3-white">
-	  	{% for d in lista_razas %}
-			<li class="w3-padding-16">
-				<span class="w3-large"><a href="{% url 'detail' d.id %}">{{ d.nombre}}</a></span><br>
-			</li>  
-		{% endfor %}
+{% block content %}
+<h2><a href="#" id="titulo_content">Portada - Las Razas y sus Primeros Personajes</a></h2>
+
+{% if razas_con_personajes %}
+    <ul>
+    {% for item in razas_con_personajes %}
+        <li>
+            <strong>{{ item.raza.nombre }}</strong> - 
+            {% if item.primer_personaje %}
+                <a href="{% url 'personaje' item.primer_personaje.id %}">{{ item.primer_personaje.nombre }}</a>
+            {% else %}
+                No hay personajes
+            {% endif %}
+        </li>  
+    {% endfor %}
     </ul>
-	{% else %}
-		<p>No hay razas creados.</p>
-	{% endif %}
-  </div>
+{% else %}
+    <p>No existen razas.</p>
+{% endif %}
 {% endblock %}
