@@ -1,0 +1,239 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-10 01:07+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\base.html:16
+msgid "La Librería del Antiguo Bosque"
+msgstr "The Library of the Old Forest"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\base.html:17
+msgid "La Comunidad del Anillo"
+msgstr "The Fellowship of the Ring"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\base.html:18
+msgid "Ir a la navegación principal"
+msgstr "Go to main navigation"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\base.html:18
+msgid "Ir al contenido"
+msgstr "Go to content"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\base.html:22
+msgid ""
+"\n"
+"          Esta es la aplicación web desarrollada en Django para la entrega "
+"del Proyecto Web Colaborativo. El tema\n"
+"          de la página web es el universo cinematográfico de <strong>El "
+"Señor de los Anillos</strong> y \n"
+"          <strong>El Hobbit</strong> de Tolkien.\n"
+"          "
+msgstr ""
+"\n"
+"          This is the web application developed in Django for the delivery "
+"of the Collaborative Web Project. The theme\n"
+"          of the website is the cinematic universe of <strong>The Lord of "
+"the Rings</strong> and \n"
+"          <strong>The Hobbit</strong> by Tolkien.\n"
+"          "
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\base.html:29
+#: .\appIngenieriaWebProyectoColaborativo\templates\base.html:48
+msgid "<em>I</em>nicio"
+msgstr "<em>H</em>ome"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\base.html:30
+#: .\appIngenieriaWebProyectoColaborativo\templates\base.html:49
+msgid "<em>P</em>ersonajes"
+msgstr "<em>C</em>haracters"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\base.html:31
+#: .\appIngenieriaWebProyectoColaborativo\templates\base.html:50
+msgid "<em>R</em>azas"
+msgstr "<em>R</em>aces"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\base.html:32
+#: .\appIngenieriaWebProyectoColaborativo\templates\base.html:51
+msgid "<em>F</em>ilmografía"
+msgstr "<em>F</em>ilmography"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\base.html:35
+msgid ""
+"\n"
+"          John Ronald Reuel Tolkien (1892-1973) fue un escritor, lingüista y "
+"académico británico, \n"
+"          considerado uno de los padres de la literatura fantástica moderna. "
+"Su pasión por los mitos \n"
+"          y las lenguas antiguas lo llevó a crear un universo literario "
+"profundamente detallado, \n"
+"          ambientado en la Tierra Media. Este mundo ficticio es el escenario "
+"de sus dos obras más famosas: \n"
+"          El Hobbit y El Señor de los Anillos.\n"
+"          "
+msgstr ""
+"\n"
+"          John Ronald Reuel Tolkien (1892-1973) was a British writer, "
+"linguist, and academic, \n"
+"          considered one of the fathers of modern fantasy literature. His "
+"passion for myths \n"
+"          and ancient languages led him to create a deeply detailed literary "
+"universe, \n"
+"          set in Middle-earth. This fictional world is the setting for his "
+"two most famous works: \n"
+"          The Hobbit and The Lord of the Rings.\n"
+"          "
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\base.html:47
+msgid "Navegación Principal"
+msgstr "Main Navigation"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\base.html:61
+msgid "Arriba"
+msgstr "Back to top"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\base.html:64
+msgid "Plantilla diseñada por"
+msgstr "Template designed by"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\base.html:65
+msgid "El Señor de los Anillos - Proyecto Ingeniería Web"
+msgstr "The Lord of the Rings - Web Engineering Project"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\base.html:73
+msgid "Cambiar idioma"
+msgstr "Change Language"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\index.html:4
+msgid "Portada - El Señor de los Anilloss"
+msgstr "Home - The Lord of the Rings"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\index.html:5
+msgid "Portada - El Señor de los Anillos"
+msgstr "Home - The Lord of the Rings"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\index.html:8
+msgid "Portada - Las Razas y sus Primeros Personajes"
+msgstr "Home - The Races and Their First Characters"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\index.html:18
+msgid "No hay personajes"
+msgstr "No characters available"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\index.html:24
+#: .\appIngenieriaWebProyectoColaborativo\templates\index_razas.html:19
+msgid "No existen razas."
+msgstr "No races available"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\index_peliculas.html:4
+#: .\appIngenieriaWebProyectoColaborativo\templates\index_peliculas.html:5
+msgid "Películas - El Señor de los Anillos"
+msgstr "Movies - The Lord of the Rings"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\index_peliculas.html:7
+msgid "Películas del universo del Señor de los Anillos"
+msgstr "Movies from The Lord of the Rings universe"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\index_peliculas.html:18
+msgid "No existen películas."
+msgstr "No movies available."
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\index_personajes.html:4
+#: .\appIngenieriaWebProyectoColaborativo\templates\index_personajes.html:5
+msgid "Personajes - El Señor de los Anillos"
+msgstr "Characters - The Lord of the Rings"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\index_personajes.html:8
+msgid "Personajes del universo del Señor de los Anillos"
+msgstr "Characters from The Lord of the Rings universe"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\index_personajes.html:19
+msgid "No existen personajes."
+msgstr "No characters available."
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\index_razas.html:4
+#: .\appIngenieriaWebProyectoColaborativo\templates\index_razas.html:5
+msgid "Razas - El Señor de los Anillos"
+msgstr "Races - The Lord of the Rings"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\index_razas.html:8
+msgid "Razas del universo del Señor de los Anillos"
+msgstr "Races from The Lord of the Rings universe"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\pelicula_detail.html:4
+#: .\appIngenieriaWebProyectoColaborativo\templates\pelicula_detail.html:5
+#: .\appIngenieriaWebProyectoColaborativo\templates\personaje_detail.html:4
+#: .\appIngenieriaWebProyectoColaborativo\templates\personaje_detail.html:5
+#: .\appIngenieriaWebProyectoColaborativo\templates\raza_detail.html:4
+#: .\appIngenieriaWebProyectoColaborativo\templates\raza_detail.html:5
+msgid "El Señor de los Anillos"
+msgstr "The Lord of the Rings"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\pelicula_detail.html:9
+#: .\appIngenieriaWebProyectoColaborativo\templates\raza_detail.html:10
+msgid "Personajes"
+msgstr "<em>C</em>haracters"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\pelicula_detail.html:17
+#: .\appIngenieriaWebProyectoColaborativo\templates\raza_detail.html:18
+msgid "No tiene personajes asociados."
+msgstr "No characters asociated."
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\personaje_detail.html:9
+msgid "Raza"
+msgstr "Race"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\personaje_detail.html:10
+msgid "Sub-raza"
+msgstr "Sub-race"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\personaje_detail.html:11
+msgid "Género"
+msgstr "Gender"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\personaje_detail.html:12
+msgid "Estatura"
+msgstr "Height"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\personaje_detail.html:13
+msgid "Edad en la Tierra Media"
+msgstr "Age in Middle-earth"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\personaje_detail.html:14
+msgid "Fecha de nacimiento"
+msgstr "Date of birth"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\personaje_detail.html:15
+msgid "Fecha de muerte"
+msgstr "Date of death"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\personaje_detail.html:17
+msgid "Películas"
+msgstr "Movies"
+
+#: .\appIngenieriaWebProyectoColaborativo\templates\personaje_detail.html:27
+msgid "No tiene películas asociadas."
+msgstr "No movies asociated."
+
+#~ msgid "Portada - The Lord of the Rings"
+#~ msgstr "Home - The Lord of the Rings"
+
+#~ msgid "Personajes - The Lord of the Rings"
+#~ msgstr "Characters - The Lord of the Rings"
+
+#~ msgid "Razas - The Lord of the Rings"
+#~ msgstr "Races - The Lord of the Rings"

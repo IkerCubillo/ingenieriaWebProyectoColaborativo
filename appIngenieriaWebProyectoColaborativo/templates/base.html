@@ -1,3 +1,4 @@
+{% load i18n %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
@@ -5,49 +6,81 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   {% load static %}
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-  <title>{% block title %}The Old Forest{% endblock %}</title>
+  <title>{% block title %}El Antiguo Bosque{% endblock %}</title>
 </head>
 
 <body>
   <div id="container">
     <div id="wrapper">
       <div id="header">
-        <h1><a href="#">The Old Forest Library</a></h1>
-        <h2>{% block header %} The Fellowship of the Ring{% endblock %}</h2>
-        <p class="hidden"><a href="#nav">Skip to Main Navigation</a> || <a href="#content_main">Skip to Content</a></p>
+        <h1><a href="#">{% trans "La Librería del Antiguo Bosque" %}</a></h1>
+        <h2>{% block header %} {% trans "La Comunidad del Anillo" %} {% endblock %}</h2>
+        <p class="hidden"><a href="#nav">{% trans "Ir a la navegación principal" %}</a> || <a href="#content_main">{% trans "Ir al contenido" %}</a></p>
       </div>
       <div id="sidebar">
         <h2>
-          Esta es la aplicación web desarrollada en Django para la entrega del Proyecto Web Colavorativo. El tema
+          {% blocktrans %}
+          Esta es la aplicación web desarrollada en Django para la entrega del Proyecto Web Colaborativo. El tema
           de la página web es el universo cinematográfico de <strong>El Señor de los Anillos</strong> y 
           <strong>El Hobbit</strong> de Tolkien.
+          {% endblocktrans %}
         </h2>
         <ul id="sidenav">
-          <li><a href="{% url 'index' %}" accesskey="i"><em>I</em>nicio</a></li>
-          <li><a href="{% url 'personajes' %}" accesskey="p"><em>P</em>ersonajes</a></li>
-          <li><a href="{% url 'razas' %}" accesskey="r"><em>R</em>azas</a></li>
-          <li><a href="{% url 'peliculas' %}" accesskey="f"><em>F</em>ilmografía</a></li>
+          <li><a href="{% url 'index' %}">{% trans "<em>I</em>nicio" %}</a></li>
+          <li><a href="{% url 'personajes' %}">{% trans "<em>P</em>ersonajes" %}</a></li>
+          <li><a href="{% url 'razas' %}">{% trans "<em>R</em>azas" %}</a></li>
+          <li><a href="{% url 'peliculas' %}">{% trans "<em>F</em>ilmografía" %}</a></li>
         </ul>
-        <p>John Ronald Reuel Tolkien (1892-1973) fue un escritor, lingüista y académico británico, 
+        <p>
+          {% blocktrans %}
+          John Ronald Reuel Tolkien (1892-1973) fue un escritor, lingüista y académico británico, 
           considerado uno de los padres de la literatura fantástica moderna. Su pasión por los mitos 
           y las lenguas antiguas lo llevó a crear un universo literario profundamente detallado, 
           ambientado en la Tierra Media. Este mundo ficticio es el escenario de sus dos obras más famosas: 
-          El Hobbit y El Señor de los Anillos.</p>
+          El Hobbit y El Señor de los Anillos.
+          {% endblocktrans %}
+        </p>
         <!-- <input value="Search..." type="text" /> -->
       </div>
       <div id="content">
         <ul id="nav">
-          <li class="hidden"><strong>Main Navigation</strong></li>
-          <li><a href="{% url 'index' %}" accesskey="i"><em>I</em>nicio</a></li>
-          <li><a href="{% url 'personajes' %}" accesskey="p"><em>P</em>ersonajes</a></li>
-          <li><a href="{% url 'razas' %}" accesskey="r"><em>R</em>azas</a></li>
-          <li><a href="{% url 'peliculas' %}" accesskey="f"><em>F</em>ilmografía</a></li>
+          <li class="hidden"><strong>{% trans "Navegación Principal" %}</strong></li>
+          <li><a href="{% url 'index' %}">{% trans "<em>I</em>nicio" %}</a></li>
+          <li><a href="{% url 'personajes' %}">{% trans "<em>P</em>ersonajes" %}</a></li>
+          <li><a href="{% url 'razas' %}">{% trans "<em>R</em>azas" %}</a></li>
+          <li><a href="{% url 'peliculas' %}">{% trans "<em>F</em>ilmografía" %}</a></li>
         </ul>
         <div id="content_main">
           {% block content %} 
           {% endblock %}
+        </div>
+        <div id="footer">
+          <p class="validate">
+            <a href="http://validator.w3.org/check?uri=referer">XHTML</a> | 
+            <a href="http://jigsaw.w3.org/css-validator/">CSS</a><br />
+            <a href="#content">{% trans "Arriba" %}</a>
+          </p>
+          <p>
+            {% trans "Plantilla diseñada por" %} <a href="http://www.sixshootermedia.com">Six Shooter Media</a>.<br />
+            © {% trans "El Señor de los Anillos - Proyecto Ingeniería Web" %}
+          </p>
+          <form action="{% url 'set_language' %}" method="post">
+            {% csrf_token %}
+            <select name="language">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+            </select>
+            <button type="submit">{% trans "Cambiar idioma" %}</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
 
-          <!-- <h2><a href="#" id="intro">Introduction</a></h2>
+
+<!-- <h2><a href="#" id="intro">Introduction</a></h2>
           <p class="details"> <a href="#"class="comlink">25 Comments</a>Posted by <a href="#">User Name</a> on <a href="#">01.01.01.</a> </p>
           <p> Hello and welcome to <strong>The Old Forest </strong>, a template created by Six Shooter Media</a> for the Open Web Design contest titled &quot;Favourite Book&quot;. "The Old Forest" is the title of a chapter in the first book of the Lord of the Rings trilogy; The Fellowship of the Ring. It happens to be my favourite chapter in the whole of this first book for its wonderfully colourful descriptions of the beginning of the Hobbits adventure. They leave the Shire and also meet Tom Bombadil, whoc rescues them in this chapter which sadly was left out of the motion picture. </p>
           <p> The image in the header is in fact a stock photo which I found on sxc.hu. I simply took it, cropped it a bit and changed the hue and saturation to acheive an effect which I feel makes the shot look like the edge of the Old Forest as described in the book and how I picture it in my head. </p>
@@ -123,15 +156,3 @@
           <p class="details"> <a href="#"class="comlink">25 Comments</a>Posted by <a href="#">User Name</a> on <a href="#">01.01.01.</a> </p>
           <p> If you decide to use this template please drop me a line to let me know! Don't hesitiate to get in touch if your interested in a custom template or just in any of my services in general. I look forward to hearing from you! </p>
            -->
-        </div>
-        <div id="footer">
-          <p class="validate"><a href="http://validator.w3.org/check?uri=referer">XHTML</a> | <a href="http://jigsaw.w3.org/css-validator/">CSS</a><br />
-            <a href="#content">Top</a></p>
-          <p>Template design by <a href="http://www.sixshootermedia.com">Six Shooter Media</a>.<br />
-            © Lord of the Rings - Proyecto Ingeniería Web</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
-</html>

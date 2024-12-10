@@ -1,0 +1,25 @@
+{% extends "admin/base_site.html" %} <!-- Extiende la plantilla normal de admin -->
+
+{% block title %}Vista personalizada{% endblock %}
+
+{% block content %}
+<h1>Vista personalizada</h1>
+<p>Bienvenido a la vista personalizada del panel de administración.</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Raza</th>
+            <th>Total de personajes</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for raza in razas %}
+        <tr>
+            <td>{{ raza.nombre }}</td>
+            <td>{{ raza.personaje_set.count }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,56 +1,100 @@
-from django.shortcuts import get_object_or_404, get_list_or_404
-from django.shortcuts import render
+from django.views.generic import ListView, DetailView, View
 from .models import Raza, Pelicula, Personaje
+from django.shortcuts import render
+
+class IndexView(View):
+    def get(self, request, *args, **kwargs):
+        # Obtener todas las razas
+        razas = Raza.objects.all()
+        
+        # Crear una lista de diccionarios que contiene la raza y su primer personaje
+        razas_con_personajes = []
+        for raza in razas:
+            primer_personaje = Personaje.objects.filter(raza=raza).order_by('nombre').first()
+            razas_con_personajes.append({
+                'raza': raza,
+                'primer_personaje': primer_personaje
+            })
+        
+        # Pasar los datos al contexto
+        context = {'razas_con_personajes': razas_con_personajes}
+        
+        # Renderizar la plantilla con el contexto
+        return render(request, 'index.html', context)
+
+class IndexView(View):
+    def get(self, request, *args, **kwargs):
+        # Obtener todas las razas
+        razas = Raza.objects.all()
+        
+        # Crear una lista de diccionarios que contiene la raza y su primer personaje
+        razas_con_personajes = []
+        for raza in razas:
+            primer_personaje = Personaje.objects.filter(raza=raza).order_by('nombre').first()
+            razas_con_personajes.append({
+                'raza': raza,
+                'primer_personaje': primer_personaje
+            })
+        
+        # Pasar los datos al contexto
+        context = {'razas_con_personajes': razas_con_personajes}
+        
+        # Renderizar la plantilla con el contexto
+        return render(request, 'index.html', context)
 
 # Devuelve el listado personajes
-def index_personajes(request):
-	personajes = get_list_or_404(Personaje.objects.order_by('nombre'))
-	context = {'lista_personajes' : personajes }
-	return render(request, 'index_personajes.html', context)
-
+class PersonajeListView(ListView):
+    model = Personaje
+    template_name = 'index_personajes.html'
+    context_object_name = 'lista_personajes'
+    queryset = Personaje.objects.order_by('nombre')
+    
 # Devuelve el listado de razas
-def index_razas(request):
-	razas = get_list_or_404(Raza.objects.order_by('nombre'))
-	context = {'lista_razas': razas }
-	return render(request, 'index_razas.html', context)
-
+class RazaListView(ListView):
+    model = Raza
+    template_name = 'index_razas.html'
+    context_object_name = 'lista_razas'
+    queryset = Raza.objects.order_by('nombre')
+    
 # Devuelve el listado de peliculas
-def index_peliculas(request):
-	peliculas = get_list_or_404(Pelicula.objects.order_by('nombre'))
-	context = {'lista_peliculas': peliculas }
-	return render(request, 'index_peliculas.html', context)
-
-def index(request):
-    # Obtener todas las razas
-    razas = Raza.objects.all()
-    
-    razas_con_personajes = []
-    for raza in razas:
-        primer_personaje = Personaje.objects.filter(raza=raza).order_by('nombre').first()
-        razas_con_personajes.append({
-            'raza': raza,
-            'primer_personaje': primer_personaje
-        })
-    
-    return render(request, 'index.html', {'razas_con_personajes': razas_con_personajes})
+class PeliculaListView(ListView):
+    model = Pelicula
+    template_name = 'index_peliculas.html'
+    context_object_name = 'lista_peliculas'
+    queryset = Pelicula.objects.order_by('nombre')
 
 # Devuelve los datos de una raza
-def show_raza(request, raza_id):
-	raza = get_object_or_404(Raza, pk=raza_id)
-	personajes =  raza.personaje_set.all()
-	context = {'personajes': personajes, 'raza': raza }
-	return render(request, 'raza_detail.html', context)
+class RazaDetailView(DetailView):
+    model = Raza
+    template_name = 'raza_detail.html'
+    context_object_name = 'raza'
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        raza = self.get_object()
+        context['personajes'] = raza.personaje_set.all()
+        return context
 
 # Devuelve los detalles de un personaje
-def show_personaje(request, personaje_id):
-	personaje = get_object_or_404(Personaje, pk=personaje_id)
-	peliculaes =  personaje.peliculas.all()
-	context = { 'personaje': personaje, 'peliculas' : peliculaes }
-	return render(request, 'personaje_detail.html', context)
+class PersonajeDetailView(DetailView):
+    model = Personaje
+    template_name = 'personaje_detail.html'
+    context_object_name = 'personaje'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        personaje = self.get_object()
+        context['peliculas'] = personaje.peliculas.all()
+        return context
 
 # Devuelve los detalles de una pelicula
-def show_pelicula(request, pelicula_id):
-    pelicula = get_object_or_404(Pelicula, pk=pelicula_id)
-    personajes =  pelicula.personaje_set.all()
-    context = { 'personajes': personajes, 'pelicula' : pelicula }
-    return render(request, 'pelicula_detail.html', context)
+class PeliculaDetailView(DetailView):
+    model = Pelicula
+    template_name = 'pelicula_detail.html'
+    context_object_name = 'pelicula'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        pelicula = self.get_object()
+        context['personajes'] = pelicula.personaje_set.all()
+        return context

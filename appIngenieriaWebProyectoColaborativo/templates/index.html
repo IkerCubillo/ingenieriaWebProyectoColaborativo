@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
-{% block title %}Portada - The Lord of the Rings{% endblock %}
-{% block header %}Portada - The Lord of the Rings{% endblock %}
+{% block title %}{% trans "Portada - El Señor de los Anilloss" %}{% endblock %}
+{% block header %}{% trans "Portada - El Señor de los Anillos" %}{% endblock %}
 
 {% block content %}
-<h2><a href="#" id="titulo_content">Portada - Las Razas y sus Primeros Personajes</a></h2>
+<h2><a href="#" id="titulo_content">{% trans "Portada - Las Razas y sus Primeros Personajes" %}</a></h2>
 
 {% if razas_con_personajes %}
     <ul>
@@ -14,12 +15,12 @@
             {% if item.primer_personaje %}
                 <a href="{% url 'personaje' item.primer_personaje.id %}">{{ item.primer_personaje.nombre }}</a>
             {% else %}
-                No hay personajes
+                {% trans "No hay personajes" %}
             {% endif %}
         </li>  
     {% endfor %}
     </ul>
 {% else %}
-    <p>No existen razas.</p>
+    <p>{% trans "No existen razas." %}</p>
 {% endif %}
 {% endblock %}

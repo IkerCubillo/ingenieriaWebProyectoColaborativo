@@ -1,19 +1,21 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
-{% block title %}Personajes - The Lord of the Rings{% endblock %}
-{% block header %}Personajes - The Lord of the Rings{% endblock %}
+{% block title %}{% trans "Personajes - El Señor de los Anillos" %}{% endblock %}
+{% block header %}{% trans "Personajes - El Señor de los Anillos" %}{% endblock %}
+
 {% block content %}
-<h2><a href="#" id="titulo_content">Personajes del universo del Señor de los Anillos</a></h2>
+<h2><a href="#" id="titulo_content">{% trans "Personajes del universo del Señor de los Anillos" %}</a></h2>
 
 {% if lista_personajes %}
     <ul>
     {% for personaje in lista_personajes %}
         <li> 
-            <a href="{% url 'personaje' personaje.id %}">{{ personaje.nombre}}</a>
+            <a href="{% url 'personaje' personaje.id %}">{{ personaje.nombre }}</a>
         </li>  
     {% endfor %}
     </ul>
-    {% else %}
-        <p>No existen personajes.</p>
+{% else %}
+    <p>{% trans "No existen personajes." %}</p>
 {% endif %}
 {% endblock %}

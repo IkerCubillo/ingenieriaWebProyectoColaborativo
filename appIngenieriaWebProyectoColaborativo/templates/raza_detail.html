@@ -1,19 +1,21 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
-{% block title %}{{ raza.nombre }} - The Lord of the Rings{% endblock %}
-{% block header %}{{ raza.nombre }} - The Lord of the Rings{% endblock %}
+{% block title %}{{ raza.nombre }} - {% trans "El Señor de los Anillos" %}{% endblock %}
+{% block header %}{{ raza.nombre }} - {% trans "El Señor de los Anillos" %}{% endblock %}
 {% block content %}
 <h2><a href="#" id="titulo_content">{{ raza.nombre }}</a></h2>
-<p>{{ raza.descripcion }}</p>
+<p>{{ raza.descripcion|default:"{% trans 'Sin descripción disponible.' %}" }}</p>
 
-<h3>Personajes</h3>
+<h3>{% trans "Personajes" %}</h3>
 {% if personajes %}
     <ul>
         {% for personaje in personajes %}
             <li><a href="{% url 'personaje' personaje.id %}">{{ personaje.nombre }}</a></li>
         {% endfor %}
     </ul>
-    {% else %}
-        <p>No tiene personajes asociados.</p>
+{% else %}
+    <p>{% trans "No tiene personajes asociados." %}</p>
 {% endif %}
 {% endblock %}
+

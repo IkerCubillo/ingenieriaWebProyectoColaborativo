@@ -1,19 +1,21 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
-{% block title %}Razas - The Lord of the Rings{% endblock %}
-{% block header %}Razas - The Lord of the Rings{% endblock %}
+{% block title %}{% trans "Razas - El Señor de los Anillos" %}{% endblock %}
+{% block header %}{% trans "Razas - El Señor de los Anillos" %}{% endblock %}
+
 {% block content %}
-<h2><a href="#" id="titulo_content">Razas del universo del Señor de los Anillos</a></h2>
+<h2><a href="#" id="titulo_content">{% trans "Razas del universo del Señor de los Anillos" %}</a></h2>
 
 {% if lista_razas %}
     <ul>
     {% for raza in lista_razas %}
         <li> 
-            <a href="{% url 'raza' raza.id %}">{{ raza.nombre}}</a>
+            <a href="{% url 'raza' raza.id %}">{{ raza.nombre }}</a>
         </li>  
     {% endfor %}
     </ul>
-    {% else %}
-        <p>No existen razas.</p>
+{% else %}
+    <p>{% trans "No existen razas." %}</p>
 {% endif %}
 {% endblock %}

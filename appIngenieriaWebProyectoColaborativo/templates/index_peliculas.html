@@ -1,19 +1,20 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
-{% block title %}Peliculas - The Lord of the Rings{% endblock %}
-{% block header %}Peliculas - The Lord of the Rings{% endblock %}
+{% block title %}{% trans "Películas - El Señor de los Anillos" %}{% endblock %}
+{% block header %}{% trans "Películas - El Señor de los Anillos" %}{% endblock %}
 {% block content %}
-<h2><a href="#" id="titulo_content">Películas del universo del Señor de los Anillos</a></h2>
+<h2><a href="#" id="titulo_content">{% trans "Películas del universo del Señor de los Anillos" %}</a></h2>
 
 {% if lista_peliculas %}
     <ul>
     {% for pelicula in lista_peliculas %}
         <li> 
-            <a href="{% url 'pelicula' pelicula.id %}">{{ pelicula.nombre}}</a>
+            <a href="{% url 'pelicula' pelicula.id %}">{{ pelicula.nombre }}</a>
         </li>  
     {% endfor %}
     </ul>
-    {% else %}
-        <p>No existen películas.</p>
+{% else %}
+    <p>{% trans "No existen películas." %}</p>
 {% endif %}
 {% endblock %}

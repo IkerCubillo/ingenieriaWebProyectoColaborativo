@@ -1,0 +1,704 @@
+[
+{
+    "model": "appIngenieriaWebProyectoColaborativo.raza",
+    "pk": 1,
+    "fields": {
+        "nombre": "Elfos",
+        "descripcion": "Los Elfos fueron la más antigua y noble de las razas hablantes de la Tierra Media. También llamados la Gente hermosa, Pueblo del Bosque, Primeros Nacidos, Antigua Raza y a sí mismos Quendi \"los que hablan\"."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.raza",
+    "pk": 2,
+    "fields": {
+        "nombre": "Hombres",
+        "descripcion": "La raza de los hombres se refiere a la humanidad en su conjunto y no denota el género en sí. Por tanto, también puede usarse el término para referirse a las mujeres de esta raza."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.raza",
+    "pk": 3,
+    "fields": {
+        "nombre": "Hobbits",
+        "descripcion": "Los Hobbits, también conocidos como «Medianos» (Periannath en lengua kuduk), se volvieron bastante raros y tímidos con la Gente Grande, como les llaman."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.raza",
+    "pk": 4,
+    "fields": {
+        "nombre": "Enanos",
+        "descripcion": "Los enanos eran una raza de la Tierra Media también conocidos como los Khazâd (en su propia lengua) o Casari , Naugrim , que significa \" Pueblo Atrofiado \", y Gonnhirrim , los \" Maestros de la Piedra \". Son los más antiguos de los Pueblos Libres del Mundo"
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.raza",
+    "pk": 5,
+    "fields": {
+        "nombre": "Orcos",
+        "descripcion": "Los Orcos (Orcs en el original inglés), conocidos por los elfos de Beleriand como Glamhoth «Horda Estridente» son una raza malvada, criada por Melkor como burla de los Elfos. Son los Quendi que cayeron en la trampa de Melkor cuando Oromë los fue a buscar para guiarlos a Aman. Fueron utilizados por los Señores Oscuros como la fuerza principal de sus ejércitos, y fueron mejorados y perfeccionados a lo largo de la historia, dando lugar a diversos tipos."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.raza",
+    "pk": 6,
+    "fields": {
+        "nombre": "Ainur",
+        "descripcion": "Los Ainur , también conocidos como los Santos , eran seres que abarcaban tanto a los Valar  como a los Maiar . Fueron los primeros y más poderosos seres creados por Eru Ilúvatar mucho antes del comienzo del Mundo."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.subraza",
+    "pk": 1,
+    "fields": {
+        "raza": 5,
+        "nombre": "Orcos Comunes",
+        "descripcion": "Son los Orcos criados originalmente por Melkor al principio de los tiempos. No soportaban la luz del sol, eran sucios y débiles, y caminaban encorvados. Es la raza de Orcos más antigua de todas, y la que durante más tiempo habitó en la Tierra Media."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.subraza",
+    "pk": 2,
+    "fields": {
+        "raza": 5,
+        "nombre": "Trasgos",
+        "descripcion": "Son de pequeño tamaño, muy posiblemente derivada de los Orcos Comunes, que se fueron adaptando a vivir en la oscuridad de las profundidades de las montañas, lo cual los hizo aún más sensibles a la luz del sol incluso que los Orcos Comunes, aunque veían mejor que estos en la oscuridad, y se desplazaban a gran velocidad por los túneles en los que habitaban."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.subraza",
+    "pk": 3,
+    "fields": {
+        "raza": 5,
+        "nombre": "Hobotrasgo",
+        "descripcion": "Es un nombre utilizado para describir a los trasgos de mayor tamaño, algunos creen que es un sinónimos de Uruk-hai."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.subraza",
+    "pk": 4,
+    "fields": {
+        "raza": 5,
+        "nombre": "Uruk-hai",
+        "descripcion": "Son una variante criada por Sauron en la Tercera Edad. Son Orcos perfeccionados, más inteligentes, de gran fuerza y tamaño, y que podían soportar la luz del sol. Despreciaban a las razas más pequeñas de Orcos, a los cuales llamaban Snaga, que significa \"esclavo\"."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.subraza",
+    "pk": 5,
+    "fields": {
+        "raza": 5,
+        "nombre": "Semi-orcos",
+        "descripcion": "Son una variante creada por Saruman a partir del cruce entre Orcos y Hombres. Hubo dos variantes de Semi-orcos, que fueron utilizados por el mago traidor como soldados de élite (Orcos-hombres) y como espías (Hombres-orcos)."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.subraza",
+    "pk": 6,
+    "fields": {
+        "raza": 6,
+        "nombre": "Maiar",
+        "descripcion": "Los Maiar (singular: Maia ) eran espíritus primordiales creados para ayudar a los Valar a dar forma al mundo en el principio. Eran numerosos, aunque no muchos recibieron nombre."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.subraza",
+    "pk": 7,
+    "fields": {
+        "raza": 6,
+        "nombre": "Valar",
+        "descripcion": "Los Valar eran los catorce Ainur que, tras ser moldeados por el pensamiento de Eru , entraron en Arda tras su creación , para dar orden al mundo y combatir los nuevos males de Melkor."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.subraza",
+    "pk": 8,
+    "fields": {
+        "raza": 3,
+        "nombre": "Pelosos",
+        "descripcion": "Era el grupo más numeroso, eran pequeños, cara lampiña, con la piel un poco mas oscura que la de los Albos y se llevaban muy bien con los Enanos. Preferían las tierras altas y las laderas de las colinas ya que eran muy ágiles aunque los más sedentarios. Fueron los primeros en desplazarse hacia el oeste y así, llegaron a la Cima de los Vientos, mientras los demás permanecían en las Tierras Ásperas."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.subraza",
+    "pk": 9,
+    "fields": {
+        "raza": 3,
+        "nombre": "Albos",
+        "descripcion": "Eran los menos numerosos, de piel y cabellos mas claros, eran más altos y delgado que los demás. Amaban los árboles y los bosques; tenían buenas relaciones con los elfos. Preferían la agricultura a la caza, eran mejor en las manualidades, el lenguaje y el canto. Eran más valientes y aventureros que los otros hobbits, por eso casi siempre eran los jefes en los clanes de los Pelosos y los Fuertes."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.subraza",
+    "pk": 10,
+    "fields": {
+        "raza": 3,
+        "nombre": "Fuertes",
+        "descripcion": "Eran los hobbits más fuertes, y de constitución corporal más sólida. Tenían los pies y las manos grandes y tenían algún rastro de barba. Preferían las llanuras y las orillas de los ríos. Vivieron mucho tiempo a orillas del Río Grande y el Anduin. Fueron al oeste luego de los Pelosos y siguieron hacia el sur, algunos de ellos vivieron un tiempo entre Tharbad y los límites de las Tierras Brunas antes de volver al norte."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.subraza",
+    "pk": 11,
+    "fields": {
+        "raza": 4,
+        "nombre": "Barbas Largas",
+        "descripcion": "El pueblo de Durin (también llamado los Barbas Largas , o Sigin-tarâg en Khuzdul) era un clan de Enanos que originalmente habitaban Khazad-dûm , liderados por Durin I , \"El Inmortal\". Fue sucedido por muchas generaciones de reyes, entre ellos aparecieron otros seis también llamados Durin."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.subraza",
+    "pk": 12,
+    "fields": {
+        "raza": 4,
+        "nombre": "Barbas de fuego",
+        "descripcion": "Los Barbas de Fuego eran una tribu de Enanos que provenían de las Montañas Azules . Estaban emparejados en hábitat con los Barbas de Fuego , pero cada tribu tenía su propia mansión. Tolkien , sin embargo, nunca especificó si los Barbas de Fuego vivían en Nogrod o Belegost ."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.subraza",
+    "pk": 13,
+    "fields": {
+        "raza": 4,
+        "nombre": "Vigas anchas",
+        "descripcion": "Los Broadbeams eran un clan de Enanos que provenían de las Montañas Azules . Fueron emparejados con los Barbas de Fuego , pero cada tribu tenía su propia mansión. Tolkien , sin embargo, nunca especificó si los Broadbeams vivían en Nogrod o Belegost."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.subraza",
+    "pk": 14,
+    "fields": {
+        "raza": 4,
+        "nombre": "Puños de hierro",
+        "descripcion": "Los Puños de Hierro eran una de las casas de los siete Siete Padres de los Enanos en la Tierra Media . Presumiblemente, ya que no aparecen en ninguno de los cuentos, vivían lejos, al este, donde fueron emparejados con los Barbas Duras . Los Puños de Hierro enviaron tropas para luchar en la Guerra de los Enanos y los Orcos durante la Tercera Edad , ya que se dice que el Pueblo de Durin pidió ayuda a las casas de otros padres de los Enanos."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.subraza",
+    "pk": 15,
+    "fields": {
+        "raza": 4,
+        "nombre": "Cerradura negra",
+        "descripcion": "Los Blacklocks eran una de las siete casas de los Enanos que habitaban en las montañas del este. Originalmente estaban emparejados con los Stonefoots . Los Blacklocks estaban entre las \" Casas de otros Padres \" que enviaron tropas para ayudar al Pueblo de Durin en la Guerra de los Enanos y los Orcos."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.subraza",
+    "pk": 16,
+    "fields": {
+        "raza": 4,
+        "nombre": "Pies de piedra",
+        "descripcion": "Los Pies de Piedra eran una de las casas de los Siete Padres de los Enanos que habitaban en las montañas del este. Originalmente estaban emparejados con los Cerrojos Negros."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.subraza",
+    "pk": 17,
+    "fields": {
+        "raza": 4,
+        "nombre": "Barbas duras",
+        "descripcion": "Los Barbas Duras eran un clan aliado con uno de los Siete Padres de los Enanos en la Tierra Media que habitaban en las montañas del Este. Originalmente estaban emparejados con los Puños de Hierro."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.subraza",
+    "pk": 18,
+    "fields": {
+        "raza": 1,
+        "nombre": "Nandor",
+        "descripcion": "Nandor significa en Quenya \"Los que volvieron\", y fueron aquellos Elfos del clan de los Teleri que se negaron a cruzar las Montañas Nubladas durante la Gran Marcha desde el Cuiviénen en el Este a las Tierras del Valinor en el Oeste. Su lider fue Lenwë, pariente de Elwë y Olwë. Estos Elfos permanecieron tras las montañas nubladas y darían origen más tarde a los Elfos Verdes y a los Elfos Silvanos. Los Elfos Nandor, junto con los Sindar, fueron conocidos como los Úmanyar que significa \"los no pertenecientes a Aman\" y eran Moriquendi pues nunca vieron la luz de los dos árboles."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.subraza",
+    "pk": 19,
+    "fields": {
+        "raza": 1,
+        "nombre": "Falmari",
+        "descripcion": "Falmari que significa \"Elfos del Mar\" en Quenya, y proviene de la palabra falma que significa \"ola encrespada\", son aquellos Teleri que completaron el viaje a Aman en las edades de los árboles al mando de Olwë, su rey, asentándose en la isla de Tol Eressëa y en las costas de Eldamar, y de entre todos los Elfos, fueron los que más amaron el mar. Fundaron dos ciudades, la de Avallónë en la isla solitaria de Tol Eressëa y Alqualondë en la Costa de Valinor."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.subraza",
+    "pk": 20,
+    "fields": {
+        "raza": 1,
+        "nombre": "Sindar",
+        "descripcion": "Los Sindar ( Q .: \"Los Grises\" ), singular Sinda , también conocidos como los Elfos Grises , eran un subgrupo de los Elfos Telerin , que eligieron quedarse en Beleriand y por lo tanto no completaron el Gran Viaje a Aman . Estos Elfos fueron considerados probablemente \"grises\" por los Exiliados Ñoldorin porque no eran Elfos de la Luz , ya que nunca habían puesto un pie en las Tierras Imperecederas , ni Avari , o los Elfos de la Oscuridad , que emprendieron el viaje y por lo tanto contaban entre los Eldar . Finalmente, los Sindar fueron reconsiderados como Úmanyar , o los Elfos del Crepúsculo, junto con sus hermanos Nandorin , algunos de los cuales se convirtieron en los Laiquendi de Ossiriand ."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.subraza",
+    "pk": 21,
+    "fields": {
+        "raza": 1,
+        "nombre": "Vanyar",
+        "descripcion": "Los Vanyar ( Q .: \"Bellas\"), singular Vanya , también llamados Elfos Bellos o Elfos de la Lanza , fueron los primeros y más pequeños de los Tres Linajes de los Eldar . Bajo el liderazgo de Ingwë , los Vanyar fueron los primeros en emprender el Gran Viaje y alcanzar las costas de Belegaer ; navegaron hacia Aman en el primer viaje de Tol Eressëa y permanecieron allí permanentemente. Muy pocos Vanyar, si es que hubo alguno, permanecieron en la Tierra Media o regresaron a ella después del Gran Viaje."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.subraza",
+    "pk": 22,
+    "fields": {
+        "raza": 1,
+        "nombre": "Noldor",
+        "descripcion": "Los Ñoldor ( Quenya : \"Profundos\", que significa \"aquellos con conocimiento\"), singular Ňoldo , también conocidos como los Elfos Profundos , fueron el segundo clan de aquellos Elfos que se unieron a la Gran Marcha y llegaron al Oeste ."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.subraza",
+    "pk": 23,
+    "fields": {
+        "raza": 2,
+        "nombre": "Dúnedain",
+        "descripcion": "Los Dúnedain (\"Hombres del Oeste\" en Sindarin), eran los Hombres de Númenor y sus descendientes que poblaron las Tierras del Oeste de la Tierra Media en la Segunda y Tercera Edad del Sol."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.subraza",
+    "pk": 24,
+    "fields": {
+        "raza": 2,
+        "nombre": "Númenóreanos Negros",
+        "descripcion": "Numóreanos negros es el nombre que se dió a los dúnedain que por diversas causas se salvaron del hundimiento de Númenor pero estaban enfrentados con Elendil y los suyos, por lo que al llegar a Tierra Media tomaron asentamientos diferentes."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.subraza",
+    "pk": 25,
+    "fields": {
+        "raza": 2,
+        "nombre": "Rohirrim",
+        "descripcion": "Los Rohirrim, es un término utilizado para referirse a aquellos caballeros que viven en las tierras de Rohan, a los Señores de Los Caballos.  Llamados también Eorlingas y Cabezas de Paja, porque eran altos, de gran fortaleza física, ojos azules y cabello rubio. Cabezas de Paja, o Forgoil, era una denominación dunlendina."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.subraza",
+    "pk": 26,
+    "fields": {
+        "raza": 2,
+        "nombre": "Hombres de Valle",
+        "descripcion": "Hombres de Valle o Bardos, residian originalemente en la ciudad de valle, aunque a la llegada del Dragón Smaug tuvieron que refugiarse en otros sitios la mayoria en Esgaroth, a la muerte del Dragón a finales de la tercera edad restablecieron su ciudad y ampliaron su reino"
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.subraza",
+    "pk": 27,
+    "fields": {
+        "raza": 2,
+        "nombre": "Casa de Bëor",
+        "descripcion": "Eran de pelo oscuro y de firme constitución. La mayoría se parecían a la de todos los Noldor Elfos. Fueron descubiertos por primera vez por Finrod Felagund, señor de Nargothrond, y bajo su dirección se dirigieron posteriormente a las tierras del señor Amrod noldorin, en un lugar conocido más adelante como Estolad, el Campamento."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.subraza",
+    "pk": 28,
+    "fields": {
+        "raza": 2,
+        "nombre": "Casa de Haleth (Haladin)",
+        "descripcion": "Era un pueblo solitario, de cabello oscuro, pero de menor estatura que los Bëorians. Por lo general, separados de los otros hombres, y se les concedió permiso para establecerse más tarde en el Bosque de Brethil, parte de Doriath. En su mayoría  se mantuvo fuera de la guerra."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.subraza",
+    "pk": 29,
+    "fields": {
+        "raza": 2,
+        "nombre": "Casa de Hador",
+        "descripcion": "Fueron conducidos originalmente por Marach pero más tarde tomó el nombre de Hador en honor a él. Los miembros de esta casa eran altos y de cabellos dorados, que más se parecian a los Vanyar de los elfos. Eran una tribu muy numerosa y guerrera, y los Elfos Verdes de Ossiriand les temian. Ellos se asentaron en Estolad, luego en la parte sur de las Ered Wethrin (Montañas de la Sombra), y más tarde en Dor-lómin. Eran leales a Fingolfin."
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.pelicula",
+    "pk": 1,
+    "fields": {
+        "nombre": "El Señor de los Anillos: la Comunidad del Anillo"
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.pelicula",
+    "pk": 2,
+    "fields": {
+        "nombre": "El Señor de los Anillos: las dos torres"
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.pelicula",
+    "pk": 3,
+    "fields": {
+        "nombre": "El Señor de los Anillos: el retorno del Rey"
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.pelicula",
+    "pk": 4,
+    "fields": {
+        "nombre": "El hobbit: un viaje inesperado"
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.pelicula",
+    "pk": 5,
+    "fields": {
+        "nombre": "El hobbit: la desolación de Smaug"
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.pelicula",
+    "pk": 6,
+    "fields": {
+        "nombre": "El hobbit: la batalla de los Cinco Ejércitos"
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.personaje",
+    "pk": 1,
+    "fields": {
+        "raza": 1,
+        "subRaza": 22,
+        "nombre": "Elrond",
+        "genero": "Masculino",
+        "estatura": 1.88,
+        "edadTierra": "Primera Edad - Tercera Edad",
+        "fecha_nacimiento": "0532-01-01",
+        "fecha_muerte": null,
+        "peliculas": [
+            1,
+            2,
+            3,
+            4,
+            6
+        ]
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.personaje",
+    "pk": 3,
+    "fields": {
+        "raza": 2,
+        "subRaza": 23,
+        "nombre": "Aragorn",
+        "genero": "Masculino",
+        "estatura": 1.98,
+        "edadTierra": "Tercera Edad - Cuarta Edad",
+        "fecha_nacimiento": "2931-03-01",
+        "fecha_muerte": "0120-03-01",
+        "peliculas": [
+            1,
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.personaje",
+    "pk": 4,
+    "fields": {
+        "raza": 2,
+        "subRaza": 25,
+        "nombre": "Théoden",
+        "genero": "Masculino",
+        "estatura": 1.75,
+        "edadTierra": "Tercera Edad",
+        "fecha_nacimiento": "2948-01-01",
+        "fecha_muerte": "3019-03-15",
+        "peliculas": [
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.personaje",
+    "pk": 5,
+    "fields": {
+        "raza": 3,
+        "subRaza": 9,
+        "nombre": "Bilbo Bolsón",
+        "genero": "Masculino",
+        "estatura": 1.25,
+        "edadTierra": "Tercera Edad",
+        "fecha_nacimiento": "2890-09-22",
+        "fecha_muerte": null,
+        "peliculas": [
+            1,
+            3,
+            4,
+            5,
+            6
+        ]
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.personaje",
+    "pk": 6,
+    "fields": {
+        "raza": 3,
+        "subRaza": 9,
+        "nombre": "Gollum",
+        "genero": "Masculino",
+        "estatura": 1.07,
+        "edadTierra": "Tercera Edad",
+        "fecha_nacimiento": "2430-01-01",
+        "fecha_muerte": "3019-03-25",
+        "peliculas": [
+            1,
+            2,
+            3,
+            4
+        ]
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.personaje",
+    "pk": 7,
+    "fields": {
+        "raza": 4,
+        "subRaza": 11,
+        "nombre": "Thorin",
+        "genero": "Masculino",
+        "estatura": 1.57,
+        "edadTierra": "Tercera Edad",
+        "fecha_nacimiento": "2746-01-01",
+        "fecha_muerte": "2941-01-01",
+        "peliculas": [
+            4,
+            5,
+            6
+        ]
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.personaje",
+    "pk": 8,
+    "fields": {
+        "raza": 4,
+        "subRaza": 11,
+        "nombre": "Gimli",
+        "genero": "Masculino",
+        "estatura": 1.37,
+        "edadTierra": "Tercera Edad",
+        "fecha_nacimiento": "2879-01-01",
+        "fecha_muerte": null,
+        "peliculas": [
+            1,
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.personaje",
+    "pk": 9,
+    "fields": {
+        "raza": 5,
+        "subRaza": 4,
+        "nombre": "Gorbag",
+        "genero": "Masculino",
+        "estatura": 1.79,
+        "edadTierra": "Tercera Edad",
+        "fecha_nacimiento": "1159-01-01",
+        "fecha_muerte": "3019-03-14",
+        "peliculas": [
+            3
+        ]
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.personaje",
+    "pk": 10,
+    "fields": {
+        "raza": 5,
+        "subRaza": 1,
+        "nombre": "Azog",
+        "genero": "Masculino",
+        "estatura": 2.97,
+        "edadTierra": "Tercera Edad",
+        "fecha_nacimiento": "2345-01-01",
+        "fecha_muerte": "2799-01-01",
+        "peliculas": [
+            4,
+            5,
+            6
+        ]
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.personaje",
+    "pk": 11,
+    "fields": {
+        "raza": 4,
+        "subRaza": 11,
+        "nombre": "Thorin II",
+        "genero": "Masculino",
+        "estatura": 1.57,
+        "edadTierra": "Tercera Edad",
+        "fecha_nacimiento": "2746-01-01",
+        "fecha_muerte": "2941-01-01",
+        "peliculas": [
+            4,
+            5,
+            6
+        ]
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.personaje",
+    "pk": 12,
+    "fields": {
+        "raza": 4,
+        "subRaza": 11,
+        "nombre": "Balin de Moria",
+        "genero": "Masculino",
+        "estatura": 1.5,
+        "edadTierra": "Tercera Edad",
+        "fecha_nacimiento": "2763-01-01",
+        "fecha_muerte": "2994-01-01",
+        "peliculas": [
+            1,
+            4,
+            5,
+            6
+        ]
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.personaje",
+    "pk": 13,
+    "fields": {
+        "raza": 1,
+        "subRaza": 20,
+        "nombre": "Legolas",
+        "genero": "Masculino",
+        "estatura": 1.83,
+        "edadTierra": "Tercera Edad - Cuarta Edad",
+        "fecha_nacimiento": "0087-01-01",
+        "fecha_muerte": null,
+        "peliculas": [
+            1,
+            2,
+            3,
+            5,
+            6
+        ]
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.personaje",
+    "pk": 14,
+    "fields": {
+        "raza": 1,
+        "subRaza": 22,
+        "nombre": "Galadriel",
+        "genero": "Femenino",
+        "estatura": 1.93,
+        "edadTierra": "Edad de los Arboles - Cuarta Edad",
+        "fecha_nacimiento": "1362-01-01",
+        "fecha_muerte": null,
+        "peliculas": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+        ]
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.personaje",
+    "pk": 15,
+    "fields": {
+        "raza": 2,
+        "subRaza": 23,
+        "nombre": "Faramir",
+        "genero": "Masculino",
+        "estatura": 1.93,
+        "edadTierra": "Tercera Edad - Cuarta Edad",
+        "fecha_nacimiento": "2983-01-01",
+        "fecha_muerte": "0083-01-01",
+        "peliculas": [
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.personaje",
+    "pk": 16,
+    "fields": {
+        "raza": 2,
+        "subRaza": 26,
+        "nombre": "Bardo I",
+        "genero": "Masculino",
+        "estatura": 1.83,
+        "edadTierra": "Tercera Edad",
+        "fecha_nacimiento": "2898-01-01",
+        "fecha_muerte": "2977-01-01",
+        "peliculas": [
+            5,
+            6
+        ]
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.personaje",
+    "pk": 17,
+    "fields": {
+        "raza": 3,
+        "subRaza": 9,
+        "nombre": "Peregrin Tuk",
+        "genero": "Masculino",
+        "estatura": 1.34,
+        "edadTierra": "Tercera Edad - Cuarta Edad",
+        "fecha_nacimiento": "2990-01-01",
+        "fecha_muerte": "0064-01-01",
+        "peliculas": [
+            1,
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.personaje",
+    "pk": 18,
+    "fields": {
+        "raza": 6,
+        "subRaza": 6,
+        "nombre": "Gandalf",
+        "genero": "Masculino",
+        "estatura": 1.8,
+        "edadTierra": "Primera Edad",
+        "fecha_nacimiento": "0001-01-01",
+        "fecha_muerte": null,
+        "peliculas": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+        ]
+    }
+},
+{
+    "model": "appIngenieriaWebProyectoColaborativo.personaje",
+    "pk": 19,
+    "fields": {
+        "raza": 6,
+        "subRaza": 6,
+        "nombre": "Sauron",
+        "genero": "Masculino",
+        "estatura": 2.78,
+        "edadTierra": "Antes Primera Edad - Tercera Edad",
+        "fecha_nacimiento": "0001-01-01",
+        "fecha_muerte": "3019-03-25",
+        "peliculas": [
+            1,
+            3,
+            5
+        ]
+    }
+}
+]

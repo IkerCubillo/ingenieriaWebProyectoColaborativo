@@ -1,16 +1,25 @@
+Definir variables del entorno:
 set WORKON_HOME=%USERPROFILE%\Envs\
 set PROJECT_HOME=%USERPROFILE%\Projects\
 
+Inicio:
 workon proyectoWebColaborativoEnv
 
+Migraciones y carga base de datos:
 python manage.py makemigrations appIngenieriaWebProyectoColaborativo
 python manage.py migrate
 
+Iniciar App:
 python manage.py runserver
 
-Raza -> Departamento
-Personaje -> Empleado
-Habilidad -> Película
+Usuario&Contraseña Admin:
+adminDjango
+adminDjango
 
-adminDjango
-adminDjango
+Traducciones:
+python manage.py makemessages -l en
+python manage.py compilemessages
+
+Carga de datos iniciales Base de Datos:
+python manage.py dumpdata appIngenieriaWebProyectoColaborativo --indent 4 > fixtures/initial_data.json
+python manage.py loaddata fixtures/initial_data.json

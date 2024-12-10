@@ -1,28 +1,30 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
-{% block title %}{{ personaje.nombre }} - The Lord of the Rings{% endblock %}
-{% block header %}{{ personaje.nombre }} - The Lord of the Rings{% endblock %}
+{% block title %}{{ personaje.nombre }} - {% trans "El Señor de los Anillos" %}{% endblock %}
+{% block header %}{{ personaje.nombre }} - {% trans "El Señor de los Anillos" %}{% endblock %}
 {% block content %}
 <h2><a href="#" id="titulo_content">{{ personaje.nombre }}</a></h2>
-<p>Raza: <a href="{% url 'raza' personaje.raza.id %}">{{ personaje.raza }}</a></p>
-<p>Sub-raza: {{ personaje.subRaza }}</p>
-<p>Género: {{ personaje.genero }}</p>
 
-<p>Género: {{ personaje.genero }}</p>
-<p>Estatura: {{ personaje.estatura }} m</p>
-<p>Edad en la Tierra Media: {{ personaje.edadTierra }}</p>
-<p>Fecha de nacimiento: {{ personaje.fecha_nacimiento }}</p>
-<p>Fecha de muerte: {{ personaje.fecha_muerte|default:"N/A" }}</p>
+<p>{% trans "Raza" %}: <a href="{% url 'raza' personaje.raza.id %}">{{ personaje.raza }}</a></p>
+<p>{% trans "Sub-raza" %}: {{ personaje.subRaza|default:"-" }}</p>
+<p>{% trans "Género" %}: {{ personaje.genero }}</p>
+<p>{% trans "Estatura" %}: {{ personaje.estatura }} m</p>
+<p>{% trans "Edad en la Tierra Media" %}: {{ personaje.edadTierra|default:"-" }}</p>
+<p>{% trans "Fecha de nacimiento" %}: {{ personaje.fecha_nacimiento }}</p>
+<p>{% trans "Fecha de muerte" %}: {{ personaje.fecha_muerte|default:"N/A" }}</p>
 
-<h3>Películas</h3>
+<h3>{% trans "Películas" %}</h3>
 {% if peliculas %}
-    {% for h in peliculas %}
-        <li>
-            <a href="{% url 'pelicula' h.id %}">{{ h.nombre}}</a>
-        </li>  
-    {% endfor %}
+    <ul>
+        {% for h in peliculas %}
+            <li>
+                <a href="{% url 'pelicula' h.id %}">{{ h.nombre }}</a>
+            </li>
+        {% endfor %}
     </ul>
-    {% else %}
-        <p>No tiene peliculas asociadas.</p>
+{% else %}
+    <p>{% trans "No tiene películas asociadas." %}</p>
 {% endif %}
 {% endblock %}
+
