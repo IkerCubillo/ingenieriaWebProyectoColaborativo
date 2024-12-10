@@ -86,9 +86,7 @@ WSGI_APPLICATION = 'ingenieriaWebProyectoColaborativo.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.getenv('DATABASE_URL', 'postgres://localhost:5432/mydb')
-    )
+    'default': dj_database_url.config(default='postgres://db_i4os_user:wk7obJ3oaPxdxvtqa8fowzrCVLRrpQaE@dpg-ctc1svggph6c73aa4pvg-a/db_i4os')
 }
 
 
