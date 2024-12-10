@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-#1fjy=yz3)5t$0+mdl4#ws&yyo$w1e!q(9dg@27=0g!0ada@+-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.render.com', "127.0.0.1"]
 
 
 # Application definition
@@ -78,19 +78,33 @@ WSGI_APPLICATION = 'ingenieriaWebProyectoColaborativo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'dbPostgre',  # Nombre de la base de datos
+#         'USER': 'postgres',  # Nombre de usuario para la base de datos
+#         'PASSWORD': 'admin',  # Contraseña para la base de datos
+#         'HOST': 'localhost',  # Usamos localhost si estás trabajando en local
+#         'PORT': '5432',  # Puerto predeterminado para PostgreSQL
 #     }
 # }
 
-DATABASES = {
-    'default': dj_database_url.config(
-        default=os.getenv('DATABASE_URL', 'postgres://localhost:5432/mydb')
-    )
-}
+# postgresql://ingenieria_web_bd_user:8fYtc8dzgPdhPWwwoeD43h83AiQOjWko@dpg-ctc2p49u0jms73cq3r80-a.frankfurt-postgres.render.com/ingenieria_web_bd
 
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default=os.getenv('DATABASE_URL', 'postgres://localhost:5432/mydb')
+#     )
+# }
+
+DATABASES["default"] = dj_database_url.parse("postgresql://ingenieria_web_bd_user:8fYtc8dzgPdhPWwwoeD43h83AiQOjWko@dpg-ctc2p49u0jms73cq3r80-a.frankfurt-postgres.render.com/ingenieria_web_bd")
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
